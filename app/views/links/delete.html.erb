@@ -1,0 +1,11 @@
+<%= render :partial => 'list_back' %>
+
+<div class="link delete">
+  <h2><%= t :delete_link %></h2>
+
+  <%= form_for :link, :url => { :action => 'destroy', :id => @link.id } do |form| %>
+      <p><%= t :delete_link_confirmation %></p>
+
+      <%= submit_tag(t :delete_perm) %>
+  <% end %>
+</div>

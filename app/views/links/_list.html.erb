@@ -1,0 +1,33 @@
+<table>
+  <thead>
+  <tr>
+    <th><%= t :channel %></th>
+    <th><%= t :from %></th>
+    <th><%= t :uri %></th>
+    <th><%= t :sfw %></th>
+    <th><%= t :pending %></th>
+    <th><%= t :archived %></th>
+    <th><%= t :created_at %></th>
+    <th><%= t :updated_at %></th>
+    <th><%= t :actions %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% links.each do |link| %>
+      <tr>
+        <td><%= link_to("#" + link.channel.name, { :controller => 'channels', :action => 'show', :id => link.channel.id }) %></td>
+        <td><%= link.from %></td>
+        <td><%= link_to(truncate(link.uri, :length => 40, :omission => "..."), { :controller => 'links', :action => 'show', :id => link.id }, :class => 'action show') %></td>
+        <td><%= link.sfw ? t(:yes) : t(:no) %></td>
+        <td><%= link.pending ? t(:yes) : t(:no) %></td>
+        <td><%= link.archived ? t(:yes) : t(:no) %></td>
+        <td><%= date_helper link.created_at %></td>
+        <td><%= date_helper link.updated_at %></td>
+        <td>
+          <%= link_to(t(:edit), { :controller => 'links', :action => 'edit', :id => link.id }, :class => 'action edit') %>
+          <%= link_to(t(:delete), { :controller => 'links', :action => 'delete', :id => link.id }, :class => 'action delete') %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

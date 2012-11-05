@@ -1,0 +1,7 @@
+<%= render :partial => 'links/list_back' %>
+
+<div class="channel show">
+  <h2><%= t :show_channel, :channel => @channel.name, :count => @links.count() %></h2>
+
+  <%= render(:partial => 'links/list', :locals => { :links => @links }) %>
+</div>

@@ -1,0 +1,7 @@
+<%= render :partial => 'list_back' %>
+
+<div class="link show">
+  <h2><%= t :show_link %></h2>
+
+  <%= render(:partial => 'show', :locals => { :link => @link }) %>
+</div>

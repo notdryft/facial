@@ -1,0 +1,34 @@
+<ul>
+  <li>
+    <strong><%= t :channel %></strong> :
+    <%= link_to("#" + link.channel.name, { :controller => 'channels', :action => 'show', :id => link.channel.id }) %>
+  </li>
+  <li>
+    <strong><%= t :from %></strong> :
+    <%= link.from %></li>
+  <li>
+    <strong><%= t :uri %></strong> :
+    <%= link_to(link.uri, link.uri) %></li>
+  <li>
+    <strong><%= t :sfw %></strong> :
+    <%= link.sfw ? t(:yes) : t(:no) %></li>
+  <li>
+    <strong><%= t :pending %></strong> :
+    <%= link.pending ? t(:yes) : t(:no) %></li>
+  <li>
+    <strong><%= t :archived %></strong> :
+    <%= link.archived ? t(:yes) : t(:no) %></li>
+  <li>
+    <strong><%= t :created_at %></strong> :
+    <%= date_helper link.created_at %>
+  </li>
+  <li>
+    <strong><%= t :updated_at %></strong> :
+    <%= date_helper link.updated_at %>
+  </li>
+  <li>
+    <strong><%= t :actions %></strong> :
+    <%= link_to(t(:edit), { :controller => 'links', :action => 'edit', :id => link.id }, :class => 'action edit') %>
+    <%= link_to(t(:delete), { :controller => 'links', :action => 'delete', :id => link.id }, :class => 'action delete') %>
+  </li>
+</ul>

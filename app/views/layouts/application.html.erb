@@ -2,13 +2,58 @@
 <html>
 <head>
   <title>Facial</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <meta charset="UTF-8">
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div id="wrapper">
+  <header>
+    <h1>Fragmented Annotation Collector for Irc Aggregation of Links</h1>
+  </header>
+
+  <% unless flash[:notice].blank? %>
+      <div id="notice">
+        <%= flash[:notice] %>
+      </div>
+  <% end %>
+
+  <div id="todo">
+    <h2>TODO</h2>
+
+    <ul>
+      <li>Cleaning &amp; CSS</li>
+      <li>Paging system</li>
+      <li>Déplier les urls minifiés</li>
+      <li>Last urls/urls du jour</li>
+      <li>Edit rapide des champs importants (sfw, etc.)</li>
+      <li>Légende sfw/pending/archived (avec les styles correspondants + show)
+      </li>
+      <li>Afficher le topic des channels sur la page associée</li>
+      <li>Masquer les canaux privées</li>
+      <li>Liste de liens par utilisateur</li>
+      <li>Ne pas afficher l'année en cours</li>
+      <li>Icônes oui/non et actions</li>
+      <li>Date du jour ?</li>
+      <li>Lecture des tags NSFW</li>
+      <li>Affichage des commentaires autour du lien ?</li>
+      <li>Headers</li>
+      <li>Troncature : http://url.com/.../fin/</li>
+      <li>Parser correctement les urls type gw2.com/new,1,2</li>
+      <li>/!\ http://</li>
+    </ul>
+  </div>
+
+  <div id="content">
+    <%= yield %>
+  </div>
+
+  <footer>
+    <p>&copy; Y'a pas de copyright en fait.</p>
+  </footer>
+</div>
 
 </body>
 </html>
