@@ -1,5 +1,63 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+# list
+  list_back: "Back to list"
+  list_links: "All links (%{count})"
+
+  channel: "Channel"
+  from: "From"
+  uri: "Link"
+  sfw: "Safe for work ?"
+  pending: "Pending ?"
+  archived: "Archived ?"
+  created_at: "When"
+  updated_at: "Last modification"
+  actions: "Actions"
+
+  yes: "Yes"
+  no: "No"
+
+# show
+  show: "Show"
+  show_link: "Link breakdown"
+  show_channel: "Links on channel #%{channel} (%{count})"
+
+# edit
+  edit: "Update"
+  edit_link: "Edit a link"
+  updated_link: "Link updated."
+
+# delete
+  delete: "Delete"
+  delete_link: "Delete link"
+  delete_link_confirmation: "Are you sure you want to permanently delete this subject ?"
+  delete_perm: "Delete permanently"
+  deleted_link: "Link deleted."
+
+# dates
+  today: "Today, at %{time}."
+  yesterday: "Yesterday, at %{time}."
+  pastday: "%{date}, at %{time}."
+
+  date:
+    day_names:
+      - Sunday
+      - Monday
+      - Tuesday
+      - Wednesday
+      - Thursday
+      - Friday
+      - Saturday
+    month_names:
+      - ~
+      - January
+      - February
+      - March
+      - April
+      - May
+      - June
+      - July
+      - August
+      - September
+      - October
+      - November
+      - December

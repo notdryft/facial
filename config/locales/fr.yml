@@ -1,0 +1,63 @@
+fr:
+# list
+  list_back: "Revenir à la liste"
+  list_links: "Tous les liens (%{count})"
+
+  channel: "Canal"
+  from: "De"
+  uri: "Lien"
+  sfw: "Safe for work ?"
+  pending: "En attente ?"
+  archived: "Archivé ?"
+  created_at: "Posté le"
+  updated_at: "Modifié le"
+  actions: "Actions"
+
+  yes: "Oui"
+  no: "Non"
+
+# show
+  show: "Montrer"
+  show_link: "Détail lien"
+  show_channel: "Liens du canal #%{channel} (%{count})"
+
+# edit
+  edit: "Modifier"
+  edit_link: "Modifier un lien"
+  updated_link: "Lien mis à jour."
+
+# delete
+  delete: "Supprimer"
+  delete_link: "Supprimer un lien"
+  delete_link_confirmation: "Êtes-vous sûr de vouloir supprimer ce lien définitivement ?"
+  delete_perm: "Supprimer définitivement"
+  deleted_link: "Lien supprimé."
+
+# dates
+  today: "Aujourd'hui, à %{time}."
+  yesterday: "Hier, à %{time}."
+  pastday: "%{date}, à %{time}."
+
+  date:
+    day_names:
+      - Dimanche
+      - Lundi
+      - Mardi
+      - Mercredi
+      - Jeudi
+      - Vendredi
+      - Samedi
+    month_names:
+      - ~
+      - Janvier
+      - Février
+      - Mars
+      - Avril
+      - Mai
+      - Juin
+      - Juillet
+      - Août
+      - Septembre
+      - Octobre
+      - Novembre
+      - Décembre
