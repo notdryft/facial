@@ -5,3 +5,20 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+channels = Channel.create([{ name: 'channel1' }, { name: 'channel2' }])
+
+Link.create(
+    [
+        {
+            channel: channels.first,
+            nick: "Nick1",
+            url: "http://localhost:3000"
+        },
+        {
+            channel: channels.last,
+            nick: "Nick2",
+            url: "http://localhost"
+        }
+    ]
+)

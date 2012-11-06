@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121105201002) do
+ActiveRecord::Schema.define(:version => 20121106223801) do
 
   create_table "channels", :force => true do |t|
     t.string   "name"
@@ -24,14 +24,14 @@ ActiveRecord::Schema.define(:version => 20121105201002) do
 
   create_table "links", :force => true do |t|
     t.integer  "channel_id"
-    t.string   "uri"
+    t.string   "url"
     t.string   "description"
     t.boolean  "sfw",         :default => true
     t.boolean  "pending",     :default => true
     t.boolean  "archived",    :default => false
     t.datetime "created_at",                     :null => false
     t.datetime "updated_at",                     :null => false
-    t.string   "from"
+    t.string   "nick"
   end
 
   add_index "links", ["channel_id"], :name => "index_urls_on_channel_id"

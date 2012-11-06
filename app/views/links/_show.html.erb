@@ -5,10 +5,10 @@
   </li>
   <li>
     <strong><%= t :from %></strong> :
-    <%= link.from %></li>
+    <%= link.nick %></li>
   <li>
-    <strong><%= t :uri %></strong> :
-    <%= link_to(link.uri, link.uri) %></li>
+    <strong><%= t :url %></strong> :
+    <%= link_to(link.url, link.url) %></li>
   <li>
     <strong><%= t :sfw %></strong> :
     <%= yesno_helper link.sfw? %></li>

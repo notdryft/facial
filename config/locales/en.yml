@@ -5,7 +5,7 @@ en:
 
   channel: "Channel"
   from: "From"
-  uri: "Link"
+  url: "Link"
   sfw: "Safe for work ?"
   pending: "Pending ?"
   archived: "Archived ?"
