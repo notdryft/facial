@@ -10,7 +10,7 @@ fr:
   pending: "En attente ?"
   archived: "Archivé ?"
   created_at: "Posté le"
-  updated_at: "Modifié le"
+  updated_at: "Dernière modification"
   actions: "Actions"
 
   oui: "Oui"
@@ -32,6 +32,9 @@ fr:
   delete_link_confirmation: "Êtes-vous sûr de vouloir supprimer ce lien définitivement ?"
   delete_perm: "Supprimer définitivement"
   deleted_link: "Lien supprimé."
+
+# stuff
+  empty: "ø"
 
 # dates
   today: "Aujourd'hui, à %{time}."

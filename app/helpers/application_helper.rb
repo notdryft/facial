@@ -18,4 +18,12 @@ module ApplicationHelper
       t 'pastday', :date => formatted_date, :time => formatted_time
     end
   end
+
+  def updated_at_helper(created_at, updated_at)
+    if created_at == updated_at
+      t :empty
+    else
+      date_helper updated_at
+    end
+  end
 end

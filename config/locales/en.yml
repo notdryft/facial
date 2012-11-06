@@ -33,6 +33,9 @@ en:
   delete_perm: "Delete permanently"
   deleted_link: "Link deleted."
 
+# stuff
+  empty: "ø"
+
 # dates
   today: "Today, at %{time}."
   yesterday: "Yesterday, at %{time}."

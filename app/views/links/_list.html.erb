@@ -22,7 +22,7 @@
         <td><%= yesno_helper link.pending? %></td>
         <td><%= yesno_helper link.archived? %></td>
         <td><%= date_helper link.created_at %></td>
-        <td><%= date_helper link.updated_at %></td>
+        <td><%= updated_at_helper link.created_at, link.updated_at %></td>
         <td>
           <%= link_to(t(:edit), { :controller => 'links', :action => 'edit', :id => link.id }, :class => 'action edit') %>
           <%= link_to(t(:delete), { :controller => 'links', :action => 'delete', :id => link.id }, :class => 'action delete') %>
