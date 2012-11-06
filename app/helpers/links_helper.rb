@@ -1,5 +1,9 @@
 module LinksHelper
 
+  def yesno_helper(boolean)
+    boolean ? t(:oui) : t(:non)
+  end
+
   def date_helper(timestamp)
     formatted_date = l timestamp, :format => '%A %d %B'
     formatted_time = l timestamp, :format => '%Hh%M'

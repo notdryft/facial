@@ -18,9 +18,9 @@
         <td><%= link_to("#" + link.channel.name, { :controller => 'channels', :action => 'show', :id => link.channel.id }) %></td>
         <td><%= link.from %></td>
         <td><%= link_to(truncate(link.uri, :length => 40, :omission => "..."), { :controller => 'links', :action => 'show', :id => link.id }, :class => 'action show') %></td>
-        <td><%= link.sfw ? t(:yes) : t(:no) %></td>
-        <td><%= link.pending ? t(:yes) : t(:no) %></td>
-        <td><%= link.archived ? t(:yes) : t(:no) %></td>
+        <td><%= yesno_helper link.sfw? %></td>
+        <td><%= yesno_helper link.pending? %></td>
+        <td><%= yesno_helper link.archived? %></td>
         <td><%= date_helper link.created_at %></td>
         <td><%= date_helper link.updated_at %></td>
         <td>

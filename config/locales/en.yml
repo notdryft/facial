@@ -13,8 +13,8 @@ en:
   updated_at: "Last modification"
   actions: "Actions"
 
-  yes: "Yes"
-  no: "No"
+  oui: "Oui"
+  non: "No"
 
 # show
   show: "Show"

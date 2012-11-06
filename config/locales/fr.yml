@@ -13,8 +13,8 @@ fr:
   updated_at: "Modifié le"
   actions: "Actions"
 
-  yes: "Oui"
-  no: "Non"
+  oui: "Oui"
+  non: "Non"
 
 # show
   show: "Montrer"
