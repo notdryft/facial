@@ -1,14 +1,14 @@
 <ul>
   <li>
     <strong><%= t :channel %></strong> :
-    <%= link_to("#" + link.channel.name, { :controller => 'channels', :action => 'show', :id => link.channel.id }) %>
+    <%= link_to output_channel(link.channel.name), { :controller => 'channels', :action => 'show', :id => link.channel.id } %>
   </li>
   <li>
     <strong><%= t :from %></strong> :
     <%= link.nick %></li>
   <li>
     <strong><%= t :url %></strong> :
-    <%= link_to(link.url, link.url) %></li>
+    <%= link_to link.url, link.url, :target => '_blank' %></li>
   <li>
     <strong><%= t :sfw %></strong> :
     <%= yesno_helper link.sfw? %></li>
@@ -28,7 +28,7 @@
   </li>
   <li>
     <strong><%= t :actions %></strong> :
-    <%= link_to(t(:edit), { :controller => 'links', :action => 'edit', :id => link.id }, :class => 'action edit') %>
-    <%= link_to(t(:delete), { :controller => 'links', :action => 'delete', :id => link.id }, :class => 'action delete') %>
+    <%= link_to t(:edit), { :controller => 'links', :action => 'edit', :id => link.id }, :class => 'action edit' %>
+    <%= link_to t(:delete), { :controller => 'links', :action => 'delete', :id => link.id }, :class => 'action delete' %>
   </li>
 </ul>
