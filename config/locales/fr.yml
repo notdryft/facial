@@ -3,6 +3,10 @@ fr:
   list_back: "Revenir à la liste"
   list_links: "Tous les liens (%{count})"
 
+  link: "Lien"
+  when: "Quand ?"
+  actions: "Actions"
+
   channel: "Canal"
   from: "De"
   url: "Lien"
@@ -11,7 +15,6 @@ fr:
   archived: "Archivé ?"
   created_at: "Posté le"
   updated_at: "Dernière modification"
-  actions: "Actions"
 
   oui: "Oui"
   non: "Non"

@@ -1,31 +1,25 @@
 <table>
   <thead>
   <tr>
-    <th><%= t :channel %></th>
-    <th><%= t :from %></th>
-    <th><%= t :url %></th>
-    <th><%= t :sfw %></th>
-    <th><%= t :pending %></th>
-    <th><%= t :archived %></th>
-    <th><%= t :created_at %></th>
-    <th><%= t :updated_at %></th>
+    <th><%= t :link %></th>
+    <th><%= t :when %></th>
     <th><%= t :actions %></th>
   </tr>
   </thead>
   <tbody>
   <% links.each do |link| %>
       <tr>
-        <td><%= link_to output_channel(link.channel.name), { :controller => 'channels', :action => 'show', :id => link.channel.id } %></td>
-        <td><%= link.nick %></td>
-        <td><%= link_to truncate(link.url, :length => 40, :omission => "..."), { :controller => 'links', :action => 'show', :id => link.id }, :class => 'action show' %></td>
-        <td><%= yesno_helper link.sfw? %></td>
-        <td><%= yesno_helper link.pending? %></td>
-        <td><%= yesno_helper link.archived? %></td>
-        <td><%= date_helper link.created_at %></td>
-        <td><%= updated_at_helper link.created_at, link.updated_at %></td>
         <td>
-          <%= link_to t(:edit), { :controller => 'links', :action => 'edit', :id => link.id }, :class => 'action edit' %>
-          <%= link_to t(:delete), { :controller => 'links', :action => 'delete', :id => link.id }, :class => 'action delete' %>
+          <%= link_to output_channel(link.channel.name), { :controller => 'channels', :action => 'show', :id => link.channel.id } %><%= link.nick %><br>
+          <%= link_to truncate(link.url, :length => 40, :omission => "..."), { :controller => 'links', :action => 'show', :id => link.id }, :class => 'action show' %>
+        </td>
+        <td>
+          <%= date_helper link.created_at %><br>
+          <%= updated_at_helper link.created_at, link.updated_at %>
+        </td>
+        <td>
+          <%= link_to t(:edit)[0..0], { :controller => 'links', :action => 'edit', :id => link.id }, :class => 'action edit' %>
+          <%= link_to t(:delete)[0..0], { :controller => 'links', :action => 'delete', :id => link.id }, :class => 'action delete' %>
         </td>
       </tr>
   <% end %>

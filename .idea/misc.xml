@@ -19,5 +19,8 @@
     </option>
     <option name="mySupportsUserInfoFilter" value="true" />
   </component>
+  <component name="TaskProjectConfiguration">
+    <server type="Redmine" url="http://chiliproject.dryft.org" />
+  </component>
 </project>
 

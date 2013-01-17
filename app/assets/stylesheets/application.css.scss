@@ -1,0 +1,58 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require reset
+ *= require_self
+ *= require_tree .
+ */
+
+/* http://en.wikipedia.org/wiki/List_of_colors */
+
+$carmine_mp: #d70040;
+
+body {
+  font: 12px/1.2em 'Open Sans', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Droid Serif', serif;
+  padding-bottom: 4px;
+  padding-top: 12px;
+}
+
+h1 {
+  font-size: x-large;
+}
+
+h2 {
+  font-size: large;
+}
+
+a {
+  color: $carmine_mp;
+  text-decoration: none;
+}
+
+a:hover {
+  color: lighten($carmine_mp, 50%);
+  text-decoration: underline;
+}
+
+ol li {
+  list-style-type: decimal;
+  margin-left: 48px;
+}
+
+#wrapper {
+  background: url("../assets/960_grid_12_col.gif") repeat-y scroll 0 0;
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 940px;
+}

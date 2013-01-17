@@ -3,6 +3,10 @@ en:
   list_back: "Back to list"
   list_links: "All links (%{count})"
 
+  link: "Link"
+  when: "When ?"
+  actions: "Actions"
+
   channel: "Channel"
   from: "From"
   url: "Link"
