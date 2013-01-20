@@ -1,25 +1,20 @@
-<table>
-  <thead>
-  <tr>
-    <th><%= t :link %></th>
-    <th><%= t :when %></th>
-    <th><%= t :actions %></th>
-  </tr>
-  </thead>
+<table class="table table-condensed table-hover">
   <tbody>
   <% links.each do |link| %>
       <tr>
         <td>
-          <%= link_to output_channel(link.channel.name), { :controller => 'channels', :action => 'show', :id => link.channel.id } %><%= link.nick %><br>
-          <%= link_to truncate(link.url, :length => 40, :omission => "..."), { :controller => 'links', :action => 'show', :id => link.id }, :class => 'action show' %>
+            <%= t :byNick, :nick => link.nick %> <%= t :onChannel %> <%= link_to output_channel(link.channel.name), { :controller => 'channels', :action => 'show', :id => link.channel.id } %>
+            <br>
+            <%= link_to truncate(link.url, :length => 50, :omission => "..."), { :controller => 'links', :action => 'show', :id => link.id } %>
         </td>
         <td>
-          <%= date_helper link.created_at %><br>
+          <%= date_helper link.created_at %>
+          <br>
           <%= updated_at_helper link.created_at, link.updated_at %>
         </td>
-        <td>
-          <%= link_to t(:edit)[0..0], { :controller => 'links', :action => 'edit', :id => link.id }, :class => 'action edit' %>
-          <%= link_to t(:delete)[0..0], { :controller => 'links', :action => 'delete', :id => link.id }, :class => 'action delete' %>
+        <td style="vertical-align: middle;">
+            <%= link_to '<i class="icon-edit"></i> '.html_safe + t(:edit), { :controller => 'links', :action => 'edit', :id => link.id }, :class => 'btn btn-mini' %>
+            <%= link_to '<i class="icon-remove"></i> '.html_safe + t(:delete), { :controller => 'links', :action => 'delete', :id => link.id }, :class => 'btn btn-mini btn-danger' %>
         </td>
       </tr>
   <% end %>

@@ -1,5 +1,3 @@
-<div class="link list">
-  <h2><%= t :list_links, :count => @links.count() %></h2>
+<h2><%= t :list_links, :count => @links.count() %></h2>
 
-  <%= render(:partial => 'list', :locals => { :links => @links }) %>
-</div>
+<%= render(:partial => 'list', :locals => { :links => @links }) %>

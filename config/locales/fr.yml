@@ -4,6 +4,7 @@ fr:
   list_links: "Tous les liens (%{count})"
 
   link: "Lien"
+  links: "Liens"
   when: "Quand ?"
   actions: "Actions"
 
@@ -18,6 +19,9 @@ fr:
 
   oui: "Oui"
   non: "Non"
+
+  byNick: "par %{nick}"
+  onChannel: "sur"
 
 # show
   show: "Montrer"

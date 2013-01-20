@@ -4,6 +4,7 @@ en:
   list_links: "All links (%{count})"
 
   link: "Link"
+  links: "Links"
   when: "When ?"
   actions: "Actions"
 
@@ -19,6 +20,9 @@ en:
 
   oui: "Oui"
   non: "No"
+
+  byNick: "by %{nick}"
+  onChannel: "on"
 
 # show
   show: "Show"
