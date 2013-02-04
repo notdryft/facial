@@ -22,8 +22,15 @@ group :assets do
   gem 'less-rails'
 end
 
+group :test do
+  gem 'minitest-reporters'
+  gem 'minitest'
+end
+
 gem 'jquery-rails'
 gem 'twitter-bootstrap-rails'
+
+gem 'ruby-prof'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.1'

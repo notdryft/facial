@@ -11,7 +11,7 @@ class LinksController < ApplicationController
   end
 
   def list
-    @links = Link.joins('INNER JOIN channels ON channels.id = links.channel_id')
+    @links = Link.find(:all, :include => [:channel])
   end
 
   def edit
