@@ -1,0 +1,6 @@
+<% for i in 1..100 %>
+<%= 'link' + i.to_s %>:
+  channel: <%= 'channel' + (i % 10 + 1).to_s %>
+  url: 'https://dryft.org/'
+  nick: <%= 'Nick' + i.to_s %>
+<% end %>
