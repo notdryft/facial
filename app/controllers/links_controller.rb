@@ -11,7 +11,12 @@ class LinksController < ApplicationController
   end
 
   def list
-    @links = Link.find(:all, :include => [:channel])
+    @links = Link.find(
+        :all,
+        :conditions => 'l.channel_id = c.id',
+        :joins => 'l, `channels` c',
+        :select => 'l.*, c.name AS channel_name'
+    )
   end
 
   def edit

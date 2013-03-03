@@ -4,4 +4,8 @@ class Link < ActiveRecord::Base
   default_scope :order => 'created_at DESC'
 
   belongs_to :channel
+  
+  def channel_name
+    @attributes['channel_name']
+  end
 end

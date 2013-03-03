@@ -3,9 +3,9 @@
   <% links.each do |link| %>
       <tr>
         <td>
-            <%= t :byNick, :nick => link.nick %> <%= t :onChannel %> <%= link_to output_channel(link.channel.name), { :controller => 'channels', :action => 'show', :id => link.channel.id } %>
+            <%= t :byNick, :nick => link.nick %> <%= t :onChannel %> <%= link_to output_channel(link.channel_name), { :controller => 'channels', :action => 'show', :id => link.channel_id } %>
             <br>
-            <%= link_to truncate(link.url, :length => 50, :omission => "..."), { :controller => 'links', :action => 'show', :id => link.id } %>
+            <%= link_to truncate(link.url, :length => 50, :omission => '...'), { :controller => 'links', :action => 'show', :id => link.id } %>
         </td>
         <td>
           <%= date_helper link.created_at %>
