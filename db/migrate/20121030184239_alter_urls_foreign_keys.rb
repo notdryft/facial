@@ -1,6 +1,6 @@
 class AlterUrlsForeignKeys < ActiveRecord::Migration
   def up
-    add_index("urls", "channel_id")
+    add_index('urls', 'channel_id')
 
     execute <<-SQL
       ALTER TABLE urls
@@ -17,6 +17,6 @@ class AlterUrlsForeignKeys < ActiveRecord::Migration
       ALTER TABLE urls DROP FOREIGN KEY fk_urls_channels;
     SQL
 
-    remove_index("urls", "channel_id")
+    remove_index('urls', 'channel_id')
   end
 end
