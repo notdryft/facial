@@ -14,7 +14,7 @@
         </td>
         <td style="vertical-align: middle;">
             <%= link_to '<i class="icon-edit"></i> '.html_safe + t(:edit), { :controller => 'links', :action => 'edit', :id => link.id }, :class => 'btn btn-mini' %>
-            <%= link_to '<i class="icon-remove"></i> '.html_safe + t(:delete), { :controller => 'links', :action => 'delete', :id => link.id }, :class => 'btn btn-mini btn-danger' %>
+            <%= link_to '<i class="icon-remove icon-white"></i> '.html_safe + t(:delete), { :controller => 'links', :action => 'delete', :id => link.id }, :class => 'btn btn-mini btn-danger' %>
         </td>
       </tr>
   <% end %>
