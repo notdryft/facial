@@ -3,9 +3,9 @@
   <% links.each do |link| %>
       <tr>
         <td>
-            <%= t :byNick, :nick => link.nick %> <%= t :onChannel %> <%= link_to output_channel(link.channel_name), { :controller => 'channels', :action => 'show', :id => link.channel_id } %>
-            <br>
-            <%= link_to truncate(link.url, :length => 50, :omission => '...'), { :controller => 'links', :action => 'show', :id => link.id } %>
+          <%= t :byNick, :nick => link.nick %>&nbsp;<%= t :onChannel %>&nbsp;<%= link_to output_channel(link.channel_name), { :controller => 'channels', :action => 'show', :id => link.channel_id } %>
+          <br>
+          <%= link_to truncate(link.url, :length => 50, :omission => '...'), { :controller => 'links', :action => 'show', :id => link.id } %>
         </td>
         <td>
           <%= date_helper link.created_at %>
@@ -13,8 +13,8 @@
           <%= updated_at_helper link.created_at, link.updated_at %>
         </td>
         <td style="vertical-align: middle;">
-            <%= link_to '<i class="icon-edit"></i> '.html_safe + t(:edit), { :controller => 'links', :action => 'edit', :id => link.id }, :class => 'btn btn-mini' %>
-            <%= link_to '<i class="icon-remove icon-white"></i> '.html_safe + t(:delete), { :controller => 'links', :action => 'delete', :id => link.id }, :class => 'btn btn-mini btn-danger' %>
+          <%= link_to '<i class="icon-edit"></i> '.html_safe + t(:edit), { :controller => 'links', :action => 'edit', :id => link.id }, :class => 'btn btn-mini' %>
+          <%= link_to '<i class="icon-remove icon-white"></i> '.html_safe + t(:delete), { :controller => 'links', :action => 'delete', :id => link.id }, :class => 'btn btn-mini btn-danger' %>
         </td>
       </tr>
   <% end %>
