@@ -2,7 +2,7 @@ Facial::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-  root :to => 'links#index'
+  root :to => 'links#list'
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
