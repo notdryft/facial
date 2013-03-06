@@ -54,6 +54,7 @@ Facial::Application.routes.draw do
 
   # See how all your routes lay out with "rake routes"
 
+  match 'links/page/:page' => 'links#list'
   match 'channels/show/:id/page/:page' => 'channels#show'
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

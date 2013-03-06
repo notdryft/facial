@@ -7,20 +7,24 @@ class LinksController < ApplicationController
   end
 
   def show
-    @link = Link.find(params[:id])
+    @link = Link.unscoped.find(params[:id])
   end
 
   def list
+    if params[:page].nil?
+      params[:page] = 1
+    end
+
     @count = Link.count
-    @links = Link.limit(10).all
+    @links = Link.page(params[:page]).per(10)
   end
 
   def edit
-    @link = Link.find(params[:id])
+    @link = Link.unscoped.find(params[:id])
   end
 
   def update
-    @link = Link.find(params[:id])
+    @link = Link.unscoped.find(params[:id])
     @link.sfw = params[:link][:sfw]
     @link.archived = params[:link][:archived]
     @link.pending = params[:link][:pending]
@@ -33,11 +37,11 @@ class LinksController < ApplicationController
   end
 
   def delete
-    @link = Link.find(params[:id])
+    @link = Link.unscoped.find(params[:id])
   end
 
   def destroy
-    Link.find(params[:id]).destroy
+    Link.unscoped.find(params[:id]).destroy
 
     flash[:notice] = t :deleted_link
     redirect_to(:action => 'list')
