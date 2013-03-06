@@ -3,10 +3,11 @@
 <head>
   <title>Facial</title>
   <meta charset="UTF-8">
-  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= stylesheet_link_tag 'application', :media => 'all' %>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -14,7 +15,10 @@
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to 'Facial', { :controller => 'links', :action => 'index' }, :class => 'brand' %>
+      <%= link_to 'Facial', {
+              :controller => 'links',
+              :action => 'index'
+      }, :class => 'brand', :rel => 'tooltip', :'data-html' => true, :'data-original-title' => '<i class="icon-tint icon-white"></i> Fragmented Annotation Collector for Irc Aggregation of Links', :'data-placement' => 'bottom' %>
 
       <ul class="nav">
         <li class="active"><%= link_to t(:links), { :controller => 'links', :action => 'index' } %></li>
