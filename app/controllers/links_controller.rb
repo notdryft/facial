@@ -11,7 +11,8 @@ class LinksController < ApplicationController
   end
 
   def list
-    @links = Link.all
+    @count = Link.count
+    @links = Link.limit(10).all
   end
 
   def edit

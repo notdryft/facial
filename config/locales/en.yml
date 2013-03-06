@@ -72,3 +72,12 @@ en:
       - October
       - November
       - December
+
+# pagination
+  views:
+    pagination:
+      first: "&#00171;"
+      previous: "&#00139;"
+      truncate: "..."
+      next: "&#00155;"
+      last: "&#00187;"
