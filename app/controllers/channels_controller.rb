@@ -9,7 +9,8 @@ class ChannelsController < ApplicationController
 
     @page = {
         :channel => channel,
-        :links_count => channel.links.count
+        :links_count => channel.links.count,
+        :page => params[:page]
     }
 
     @links = channel.links.page(params[:page]).per(10)

@@ -9,6 +9,7 @@ fr:
   actions: "Actions"
 
   channel: "Canal"
+  channels: "Canaux"
   from: "De"
   url: "Lien"
   sfw: "Safe for work ?"
@@ -75,6 +76,7 @@ fr:
 # pagination
   views:
     pagination:
+      page: "Page"
       first: "&#00171;"
       previous: "&#00139;"
       truncate: "..."

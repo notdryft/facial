@@ -1,17 +1,12 @@
-<%= render :partial => 'list_back' %>
+<h2><%= t :edit_link %></h2>
 
-<div class="link edit">
-  <h2><%= t :edit_link %></h2>
+<%= form_for(:link, :url => { :action => 'update', :id => @link.id }) do |form| %>
+    <%= render(:partial => 'form', :locals => { :form => form }) %>
 
-  <%= form_for(:link, :url => { :action => 'update', :id => @link.id }) do |form| %>
-      <%= render(:partial => 'form', :locals => { :form => form }) %>
+    <%= submit_tag(t :edit) %>
+<% end %>
 
-      <%= submit_tag(t :edit) %>
-  <% end %>
-</div>
+<h2><%= t :show_link %></h2>
 
-<div class="link show">
-  <h2><%= t :show_link %></h2>
+<%= render(:partial => 'show', :locals => { :link => @link }) %>
 
-  <%= render(:partial => 'show', :locals => { :link => @link }) %>
-</div>
