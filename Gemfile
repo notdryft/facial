@@ -28,6 +28,10 @@ group :test do
   gem 'minitest'
 end
 
+gem 'haml'
+# If you want to use the scaffold-functions too, add haml-rails within your development-group:
+gem 'haml-rails', :group => :development
+
 gem 'jquery-rails'
 gem 'twitter-bootstrap-rails'
 

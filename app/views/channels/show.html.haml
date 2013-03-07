@@ -1,0 +1,5 @@
+%h2= t :show_channel, :channel => @page[:channel].name, :count => @page[:links_count]
+
+= render :partial => 'links/list', :locals => { :links => @links }
+
+.pagination-centered= paginate @links

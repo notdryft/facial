@@ -1,0 +1,38 @@
+%ul
+  %li
+    %strong= t :channel
+    \:
+    \#{link_to output_channel(link.channel.name), { :controller => 'channels', :action => 'show', :id => link.channel.id }}
+  %li
+    %strong= t :from
+    \:
+    \#{link.nick}
+  %li
+    %strong= t :url
+    \:
+    \#{link_to link.url, link.url, :target => '_blank'}
+  %li
+    %strong= t :sfw
+    \:
+    \#{yesno_helper link.sfw?}
+  %li
+    %strong= t :pending
+    \:
+    \#{yesno_helper link.pending?}
+  %li
+    %strong= t :archived
+    \:
+    \#{yesno_helper link.archived?}
+  %li
+    %strong= t :created_at
+    \:
+    \#{date_helper link.created_at}
+  %li
+    %strong= t :updated_at
+    \:
+    \#{date_helper link.updated_at}
+  %li
+    %strong= t :actions
+    \:
+    \#{link_to t(:edit), { :controller => 'links', :action => 'edit', :id => link.id }, :class => 'action edit'}
+    \#{link_to t(:delete), { :controller => 'links', :action => 'delete', :id => link.id }, :class => 'action delete'}

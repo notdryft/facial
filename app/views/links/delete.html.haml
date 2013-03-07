@@ -1,0 +1,5 @@
+%h2= t :delete_link
+
+= form_for :link, :url => { :action => 'destroy', :id => @link.id } do |form|
+  %p= t :delete_link_confirmation
+  = submit_tag(t :delete_perm)

@@ -1,0 +1,5 @@
+%h2= t :list_links, :count => @count
+
+= render(:partial => 'list', :locals => { :links => @links })
+
+.pagination-centered= paginate @links

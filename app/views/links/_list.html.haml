@@ -1,0 +1,16 @@
+%table.table.table-condensed.table-hover
+  %tbody
+    - links.each do |link|
+      %tr
+        %td
+          %p= link_to truncate(link.url, :length => 50, :omission => '...'), { :controller => 'links', :action => 'show', :id => link.id }
+          %p.muted
+            = t :byNick, :nick => link.nick
+            = t :onChannel
+            = link_to output_channel(link.channel_name), { :controller => 'channels', :action => 'show', :id => link.channel_id }
+        %td
+          %p= date_helper link.created_at
+          %p.muted= updated_at_helper link.created_at, link.updated_at
+        %td{ :style => 'text-align: right; vertical-align: middle;' }
+          = link_to '<i class="icon-edit"></i> '.html_safe + t(:edit), { :controller => 'links', :action => 'edit', :id => link.id }, :class => 'btn btn-mini'
+          = link_to '<i class="icon-remove icon-white"></i> '.html_safe + t(:delete), { :controller => 'links', :action => 'delete', :id => link.id }, :class => 'btn btn-mini btn-danger'
