@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.12'
+gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -18,7 +18,7 @@ group :assets do
   gem 'therubyracer', :platforms => :ruby
   gem 'execjs'
 
-  gem 'uglifier', '>= 1.3.0'
+  gem 'uglifier', '>= 2.1.1'
 
   gem 'less-rails'
 end
