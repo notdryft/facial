@@ -8,6 +8,9 @@ Bundler.require(*Rails.groups)
 
 module Facial
   class Application < Rails::Application
+
+    config.version = '0.1.0-SNAPSHOT'
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

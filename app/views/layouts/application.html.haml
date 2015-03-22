@@ -23,7 +23,10 @@
     .container
       - unless flash[:notice].blank?
         .alert.alert-info
-          %button.close{:type=>'button',:'data-dismiss'=>'alert'} ×
+          %button.close{ :type => 'button', :'data-dismiss' => 'alert' } &times;
           %h4 Information
           = flash[:notice]
       = yield
+      %footer.row-fluid.text-right
+        .col-xs-12
+          %code= @version
