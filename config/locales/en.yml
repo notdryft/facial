@@ -1,5 +1,7 @@
 en:
+
 # list
+
   list_back: "Back to list"
   list_links: "All links (%{count})"
 
@@ -26,16 +28,19 @@ en:
   onChannel: "on"
 
 # show
+
   show: "Show"
   show_link: "Link breakdown"
   show_channel: "Links on channel #%{channel} (%{count})"
 
 # edit
+
   edit: "Update"
   edit_link: "Edit a link"
   updated_link: "Link updated."
 
 # delete
+
   delete: "Delete"
   delete_link: "Delete link"
   delete_link_confirmation: "Are you sure you want to permanently delete this subject ?"
@@ -43,9 +48,11 @@ en:
   deleted_link: "Link deleted."
 
 # stuff
+
   empty: "ø"
 
 # dates
+
   today: "Today, at %{time}."
   yesterday: "Yesterday, at %{time}."
   pastday: "%{date}, at %{time}."
@@ -75,6 +82,7 @@ en:
       - December
 
 # pagination
+
   views:
     pagination:
       page: "Page"

@@ -1,5 +1,7 @@
 fr:
+
 # list
+
   list_back: "Revenir à la liste"
   list_links: "Tous les liens (%{count})"
 
@@ -25,16 +27,19 @@ fr:
   onChannel: "sur"
 
 # show
+
   show: "Montrer"
   show_link: "Détail lien"
   show_channel: "Liens du canal #%{channel} (%{count})"
 
 # edit
+
   edit: "Modifier"
   edit_link: "Modifier un lien"
   updated_link: "Lien mis à jour."
 
 # delete
+
   delete: "Supprimer"
   delete_link: "Supprimer un lien"
   delete_link_confirmation: "Êtes-vous sûr de vouloir supprimer ce lien définitivement ?"
@@ -42,9 +47,11 @@ fr:
   deleted_link: "Lien supprimé."
 
 # stuff
+
   empty: "ø"
 
 # dates
+
   today: "Aujourd'hui, à %{time}."
   yesterday: "Hier, à %{time}."
   pastday: "%{date}, à %{time}."
@@ -74,6 +81,7 @@ fr:
       - Décembre
 
 # pagination
+
   views:
     pagination:
       page: "Page"

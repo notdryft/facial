@@ -1,57 +1,46 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+gem 'rails', '4.2.1'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+# Database
 
-gem 'mysql2'
+gem 'mysql2', '0.3.18'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails', '~> 3.2.6'
-  gem 'coffee-rails', '~> 3.2.2'
-#  gem 'font-awesome-rails'
+# Assets
 
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platforms => :ruby
-  gem 'execjs'
+## HTML
 
-  gem 'uglifier', '>= 2.1.1'
+gem 'haml', '4.0.6'
+gem 'haml-rails', '0.9.0', :group => :development
 
-  gem 'less-rails'
+## Stylesheets
+
+gem 'less-rails', '2.6.0'
+gem 'sass-rails', '5.0.1'
+gem 'twitter-bootstrap-rails', '3.2.0'
+
+## Javascripts
+
+gem 'coffee-rails', '4.1.0'
+gem 'jquery-rails', '4.0.3'
+gem 'uglifier', '2.7.1'
+gem 'therubyracer', '0.12.1', platforms: :ruby
+
+# Pagination
+gem 'kaminari', '0.16.3'
+gem 'kaminari-bootstrap', '3.0.1'
+
+# Dev stuff
+
+group :development, :test do
+  gem 'byebug', '4.0.3'
+  gem 'ruby-prof', '0.15.6'
+  gem 'spring', '1.3.3'
+  gem 'web-console', '2.1.2'
 end
 
-group :test do
-  gem 'minitest-reporters'
-  gem 'minitest'
-end
+# Dunno
 
-gem 'haml'
-# If you want to use the scaffold-functions too, add haml-rails within your development-group:
-gem 'haml-rails', :group => :development
-
-gem 'jquery-rails'
-gem 'twitter-bootstrap-rails'
-
-gem 'ruby-prof'
-
-# pagination
-gem 'kaminari'
-gem 'kaminari-bootstrap'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.1'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
+gem 'turbolinks', '2.5.3'
+gem 'jbuilder', '2.2.12'
+gem 'sdoc', '0.4.1', group: :doc
