@@ -15,7 +15,7 @@ class LinksController < ApplicationController
       params[:page] = 1
     end
 
-    @count = Link.count
+    @count = Link.unscoped.count
     @links = Link.page(params[:page]).per(10)
   end
 
