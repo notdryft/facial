@@ -10,15 +10,21 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
-    .navbar.navbar-inverse.navbar-fixed-top
-      .navbar-inner
-        .container
+    %nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          %button.navbar-toggle.collapse{ :type => 'button', :'data-toggle' => 'collapse', :'data-target' => 'navbar-toggle' }
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
           = link_to 'Facial', { :controller => 'links', :action => 'index' },
-            :class => 'brand', :rel => 'tooltip',
+            :class => 'navbar-brand', :rel => 'tooltip',
             :'data-html' => true,
-            :'data-original-title' => '<i class="icon-tint icon-white"></i> Fragmented Annotation Collector for Irc Aggregation of Links',
+            :'data-original-title' => '<span class="glyphicon glyphicon-tint glyphicon-white" aria-hidden="true"></span> Fragmented Annotation Collector for Irc Aggregation of Links',
             :'data-placement' => 'bottom'
-          %ul.nav
+        #navbar-toggle.collapse.navbar-collapse
+          %ul.nav.navbar-nav
             %li.active= link_to t(:links), { :controller => 'links', :action => 'index' }
     .container
       - unless flash[:notice].blank?

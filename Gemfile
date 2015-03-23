@@ -15,9 +15,8 @@ gem 'haml-rails', '0.9.0', :group => :development
 
 ## Stylesheets
 
-gem 'less-rails', '2.6.0'
+gem 'bootstrap-sass', '3.3.4.1'
 gem 'sass-rails', '5.0.1'
-gem 'twitter-bootstrap-rails', '3.2.0'
 
 ## Javascripts
 
