@@ -3,5 +3,9 @@ language: ruby
 rvm:
   - 2.2.1
 
+env:
+  global:
+    secure: "RM8xUNE2qoBStT/yckPpn1Iko6SCfYfQyr7y+AHkPMAwjzA5AJ9Knlizve0uutISzofUZlWsX3KKmWdxvQVEtqvgxNuL1ILleiGMjmYGzDYXOaUKnDgLyG23Xteh5NtwiIlrh/PXg6ECYvQbsWTs8bdA3EUUvmZ1GkKoBWWsDog="
+
 before_script:
   - mysql -e 'create database facial_test character set utf8;'

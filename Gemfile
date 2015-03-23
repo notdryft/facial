@@ -37,6 +37,8 @@ group :development, :test do
   gem 'ruby-prof', '0.15.6'
   gem 'spring', '1.3.3'
   gem 'web-console', '2.1.2'
+
+  gem 'codeclimate-test-reporter', '0.4.7', require: nil
 end
 
 # Dunno
